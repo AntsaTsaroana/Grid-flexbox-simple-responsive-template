@@ -1,0 +1,88 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: auto 1fr auto;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    grid-column: 1 / span 3;
+    background-color: rgb(1, 92, 92);
+    color: white;
+}
+
+nav {
+    padding: 20px;
+    background-color: rgb(138, 27, 27);
+}
+
+nav ul {
+    max-height: 577px;
+    list-style-type: none;
+    flex-direction: column;
+}
+
+nav ul li { 
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+}
+
+main {
+    padding: 20px;
+}
+
+main h2 {
+    margin-bottom: 15px;
+}
+
+aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(60 108 38);
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    grid-column: 1 / span 3;
+    background-color: rgb(90, 165, 165);
+    color: white;
+}
+
+@media screen and (max-width:1000px) {
+    .container {
+        display: block; /* Or use flex-direction: column*/
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav {
+        padding: 10px;
+    }
+
+    main {
+        min-height: 500px;
+    }
+}
